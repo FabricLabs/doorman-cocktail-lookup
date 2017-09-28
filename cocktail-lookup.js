@@ -1,4 +1,4 @@
-module.exports = function (Kirbi) {
+module.exports = function (Doorman) {
 	return {
 		commands: [
 			'cocktail'
@@ -10,7 +10,7 @@ module.exports = function (Kirbi) {
 			process: (msg, suffix, isEdit, cb) => {
 				if (!suffix) {
 					cb({ embed: {
-						color: Kirbi.Config.discord.defaultEmbedColor,
+						color: Doorman.Config.discord.defaultEmbedColor,
 						author: {
 							name: 'CocktailDB',
 							url: 'http://www.thecocktaildb.com/',
@@ -66,7 +66,7 @@ module.exports = function (Kirbi) {
 							});
 
 							cb({ embed: {
-								color: Kirbi.Config.discord.defaultEmbedColor,
+								color: Doorman.Config.discord.defaultEmbedColor,
 								title: `__${result.strDrink}__`,
 								author: {
 									name: 'CocktailDB',
@@ -80,7 +80,7 @@ module.exports = function (Kirbi) {
 							} }, msg);
 						} else {
 							cb({ embed: {
-								color: Kirbi.Config.discord.defaultEmbedColor,
+								color: Doorman.Config.discord.defaultEmbedColor,
 								author: {
 									name: 'CocktailDB',
 									url: 'http://www.thecocktaildb.com/',
@@ -91,7 +91,7 @@ module.exports = function (Kirbi) {
 						}
 					} else {
 						cb({ embed: {
-							color: Kirbi.Config.discord.defaultEmbedColor,
+							color: Doorman.Config.discord.defaultEmbedColor,
 							author: {
 								name: 'CocktailDB',
 								url: 'http://www.thecocktaildb.com/',
